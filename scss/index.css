@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #222;
+}
+
+header {
+  background: rgba(85, 214, 170, 0.85);
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+
+@media only screen and (min-width: 800px) {
+  header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+}
+
+header h1 {
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+@media only screen and (min-width: 800px) {
+  header h1 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+
+header .nav-toggle {
+  display: none;
+}
+
+header .nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 104px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+  header .nav-toggle-label {
+    display: none;
+  }
+}
+
+header .nav-toggle-label:hover span::before {
+  -webkit-transform: translateY(-1.5px);
+          transform: translateY(-1.5px);
+}
+
+header .nav-toggle-label:hover span::after {
+  -webkit-transform: translateY(1.5px);
+          transform: translateY(1.5px);
+}
+
+header .nav-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100vh;
+}
+
+header .nav-icon span {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .nav-icon span,
+header .nav-icon span::before,
+header .nav-icon span::after {
+  display: block;
+  width: 2em;
+  height: 2px;
+  background: white;
+  border-radius: 100vh;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  transition: transform 250ms ease, -webkit-transform 250ms ease;
+}
+
+header .nav-toggle-label span::before,
+header .nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: -webkit-transform 350ms ease;
+  transition: -webkit-transform 350ms ease;
+  transition: transform 350ms ease;
+  transition: transform 350ms ease, -webkit-transform 350ms ease;
+}
+
+header .nav-toggle-label span::before {
+  top: -0.6em;
+}
+
+header .nav-toggle-label span::after {
+  top: 0.6em;
+}
+
+header .nav-toggle:checked ~ nav {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+header .nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 250ms ease 130ms;
+  transition: opacity 250ms ease 130ms;
+}
+
+header .nav-toggle:checked + label span {
+  background-color: transparent;
+}
+
+header .nav-toggle:checked + label span::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 0;
+}
+
+header .nav-toggle:checked + label span::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 0;
+}
+
+header nav {
+  position: absolute;
+  text-align: left;
+  left: 0;
+  width: 100%;
+  background: rgba(85, 214, 170, 0.85);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  transition: transform 250ms ease, -webkit-transform 250ms ease;
+}
+
+@media only screen and (min-width: 800px) {
+  header nav {
+    all: unset;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media only screen and (min-width: 800px) {
+  header nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+header nav ul li {
+  margin-bottom: 1em;
+  margin-left: 1.8em;
+  -webkit-transition: color 2000ms ease;
+  transition: color 2000ms ease;
+}
+
+header nav ul li:last-child {
+  margin-bottom: 1.5em;
+}
+
+@media only screen and (min-width: 800px) {
+  header nav ul li {
+    margin-bottom: 0;
+    margin-left: 3em;
+  }
+  header nav ul li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transition: color 250ms ease, opacity 150ms ease;
+  transition: color 250ms ease, opacity 150ms ease;
+}
+
+@media only screen and (min-width: 800px) {
+  header nav ul li a {
+    opacity: 1;
+    position: relative;
+  }
+  header nav ul li a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transition: -webkit-transform 250ms ease;
+    transition: -webkit-transform 250ms ease;
+    transition: transform 250ms ease;
+    transition: transform 250ms ease, -webkit-transform 250ms ease;
+  }
+}
+
+header nav ul li a:hover {
+  color: black;
+}
+
+header nav ul li a:hover::before {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.content {
+  height: 200vh;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,175 @@
+body{
+        background-color: #d1d8e0;
+}
+.navbar{
+        border:1px solid silver;
+        border:none;
+      }
+      
+      /* change the navbar background-color */
+      #header-2 .bg-custom{
+        background:#1ab7ea;
+      }
+      
+      /* change the navbar Hamburger toggler Icon */
+      .custom-toggler.navbar-toggler {
+          border: 2px solid rgb(77,77,77);
+      }
+      .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(50,100,100, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      }
+      .navbar-toggler:focus, .navbar-toggler:active,.navbar-toggler-icon:focus {
+          outline: none;
+          box-shadow: none;
+      }
+      
+      /* change the brand color */
+      .bg-custom .navbar-brand{
+        color:#3b5999;
+        font-size:30px;
+        margin:0px;
+        padding:0px;
+      }
+      
+      /* change the text color */
+      .nav-item{
+        font-size:20px;
+        font-weight:400;
+        margin:0px 2px;
+      }
+      .nav-item a{
+        color:#3b5999;
+      }
+      
+      
+      /* change the text color of active or hovered links */
+      .bg-custom .nav-item.active .nav-link,
+      .bg-custom .nav-item:hover .nav-link {
+          color:#fff;
+          background-color: #007ee5; /* add background-color to active links */
+          background-repeat: repeat;
+          height: 100%;
+          width: auto;
+      }
+      
+      /* for dropdown only - change the color of droodown */
+      .bg-custom .dropdown-menu {
+         background: rgb(53,30,37);
+      }
+      .bg-custom .dropdown-item {
+        color:yellowgreen;
+        font-size:18px;
+        padding:2px 10px;
+        margin:5px 0px;
+      }
+      .bg-custom .dropdown-item:hover,
+      .bg-custom .dropdown-item:focus {
+          color: #fff;
+          background-color:#0f0f;
+      }
+      
+      @media (max-width:575px){
+        .nav-item a{
+          text-align:center;
+        }
+      }
+      
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Poppins&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat',sans-serif;
+      }
+      .cards{
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px;
+      }
+      .cards h2.header{
+        font-size: 40px;
+        margin: 0 0 30px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .services{
+        display: flex;
+        align-items: center;
+      }
+      .content{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid blueviolet;
+        border-radius: 4px;
+        transition: all .3s ease;
+      }
+      .content .fab{
+        font-size: 70px;
+        margin: 16px 0;
+      }
+      .content > *{
+        flex: 1 1 100%;
+      }
+      .content:hover{
+        color: white;
+      }
+      .content:hover a{
+        border-color: white;
+        background: white;
+      }
+      .content-1:hover{
+        border-color: #fc5c65;
+        background: #fc5c65;
+      }
+      .content-1:hover a{
+        color: #fc5c65;
+      }
+      .content-2:hover{
+        border-color: #09b83e;
+        background: #09b83e;
+      }
+      .content-2:hover a{
+        color: #09b83e;
+      }
+      .content-3:hover{
+        border-color: #2bcbba;
+        background: #2bcbba;
+      }
+      .content-3:hover a{
+        color: #2bcbba;
+      }
+      .content h2{
+        font-size: 30px;
+        margin: 16px 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .content p{
+        font-size: 17px;
+        font-family: 'Poppins',sans-serif;
+      }
+      .content a{
+        margin: 22px 0;
+        background: #da552f;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: 1px solid #da552f;
+        padding: 15px 0;
+        border-radius: 25px;
+        transition: .3s ease;
+      }
+      .content a:hover{
+        border-radius: 4px;
+      }
+      @media (max-width: 900px) {
+        .services{
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      
