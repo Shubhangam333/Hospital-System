@@ -1,4 +1,4 @@
-# Hospital-System
+# Hospital-Management-System
 
 How to run the Hospital Management System (HMS) Project
 1. Download the  zip file
